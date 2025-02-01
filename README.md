@@ -83,7 +83,7 @@ django-layout/
     └── project_name/
         ├── __init__.py
         ├── asgi.py
-        ├── example.config.py
+        ├── config.py
         ├── routers.py
         ├── urls.py
         ├── wsgi.py
