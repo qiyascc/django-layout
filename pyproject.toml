@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "cc-django-layout"
+version = "1.0.0"
+description = "Django Layout for epic development and prroduction."
+authors = ["Qiyas <qiyasturk@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+django = "^5.1.5"
+djangorestframework = "^3.15.2"
+django-jazzmin = "^3.0.1"
+goodconf = "^6.0.0"
+django-alive = "^2.0.0"
+gunicorn = "^23.0.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
