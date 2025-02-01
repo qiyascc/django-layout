@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Qiyas CC">
+    <meta name="description" content="Error page for {{ project_name }}">
+    <meta name="keywords" content="Error, django, {{ project_name }}">
+    <meta name="theme-color" content="#000000">
+    <title>{% block title %}Error Page{% endblock %}</title>
+
+    <link rel="stylesheet" href="{% static 'error/styles.css' %}">
+</head>
+<body>
+    <div id="textContent" style="display: none;">
+        <div id="largeText">{% block error_code %}XXX{% endblock %}</div>
+        <div id="smallText">{% block error_message %}ERROR{% endblock %}</div>
+    </div>
+    <canvas id="notFoundCanvas" aria-label="{% block canvas_label %}Error Page{% endblock %}"></canvas>
+
+    <script src="{% static 'error/script.js' %}"></script>
+</body>
+</html>
