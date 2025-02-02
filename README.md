@@ -1,33 +1,39 @@
-# Django Layout
 
-This repository provides a pre-configured Django project layout designed for rapid development and production-ready setups. It includes a well-organized directory structure, essential configurations, and useful tools to kickstart your Django projects.
 
-## Features
+# 🚀 Django Layout
 
-- **Pre-configured Settings**: Separate settings for development and production environments.
-- **Error Pages**: Custom 404, 500, and 502 error pages with interactive animations.
-- **Database Routing**: Built-in support for multiple databases with a custom router.
-- **Jazzmin Admin**: A modern and customizable admin interface.
-- **Static and Media Files**: Pre-configured static and media file handling.
-- **Poetry Integration**: Manage dependencies and virtual environments with Poetry.
+This repository provides a **pre-configured Django project layout** designed for rapid development and production-ready setups. It includes a well-organized directory structure, essential configurations, and useful tools to kickstart your Django projects.
 
-## Installation
+---
+
+## 🌟 Features
+
+- **Pre-configured Settings**: Separate settings for development and production environments ✨.
+- **Error Pages**: Custom 404, 500, and 502 error pages with **interactive animations** 🎬.
+- **Database Routing**: Built-in support for multiple databases with a custom router 🗄️.
+- **Jazzmin Admin**: A modern and customizable admin interface 🎨.
+- **Static and Media Files**: Pre-configured static and media file handling 📂.
+- **Poetry Integration**: Manage dependencies and virtual environments with Poetry 📦.
+- **Interactive Error Pages**: Custom error pages with animations for 404, 500, and 502 errors 🌀.
+- **Multi-Database Support**: Built-in support for multiple databases with a custom router 🔗.
+
+---
+
+## 🛠️ Installation
 
 ### Prerequisites
 
-- Python 3.10 or higher
-- Poetry (for dependency management)
+- Python 3.10 or higher 🐍
+- Poetry (for dependency management) 📦
 
 ### Setting Up the Project
 
 1. **Install Poetry** (if not already installed):
-
    ```bash
    pip install poetry
    ```
 
 2. **Create a New Django Project Using This Layout**:
-
    ```bash
    django-admin startproject \
      --template=https://github.com/qiyascc/django-layout/zipball/main \
@@ -38,81 +44,80 @@ This repository provides a pre-configured Django project layout designed for rap
    ```
 
 3. **Navigate to Your Project Directory**:
-
    ```bash
    cd YOUR_PROJECT_NAME
    ```
 
 4. **Activate the Virtual Environment**:
-
    ```bash
    poetry shell
    ```
 
 5. **Install Dependencies**:
-
    ```bash
    poetry install
    ```
 
 6. **Run Migrations**:
-
    ```bash
    python manage.py migrate
    ```
 
 7. **Start the Development Server**:
-
    ```bash
    python manage.py runserver
    ```
 
-## Project Structure
+---
+
+## 📂 Project Structure
 
 ```
-django-layout/
+qiyascc-django-layout/
 ├── README.md
 ├── LICENSE
+├── Makefile
+├── manage.py
 ├── pyproject.toml
+├── client/
+│   └── description.txt
+├── databases/
+│   └── core/
+│       └── description.txt
 └── project_name/
-    ├── manage.py
-    ├── client/
-    │   └── description.txt
-    ├── databases/
-    │   └── core/
-    │       └── description.txt
-    └── project_name/
-        ├── __init__.py
-        ├── asgi.py
-        ├── config.py
-        ├── routers.py
-        ├── urls.py
-        ├── wsgi.py
-        ├── apps/
-        │   └── __init__.py
-        ├── settings/
-        │   ├── __init__.py
-        │   ├── base.py
-        │   ├── dev.py
-        │   └── prod.py
-        ├── static/
-        │   ├── error/
-        │   │   ├── script.js
-        │   │   └── styles.css
-        │   └── logo/
-        └── templates/
-            ├── 404.html
-            ├── 500.html
-            ├── 502.html
-            └── error/
-                └── base.html
+    ├── __init__.py
+    ├── asgi.py
+    ├── config.py
+    ├── routers.py
+    ├── urls.py
+    ├── wsgi.py
+    ├── apps/
+    │   └── __init__.py
+    ├── settings/
+    │   ├── __init__.py
+    │   ├── base.py
+    │   ├── dev.py
+    │   └── prod.py
+    ├── static/
+    │   ├── error/
+    │   │   ├── script.js
+    │   │   └── styles.css
+    │   └── logo/
+    └── templates/
+        ├── 404.html
+        ├── 500.html
+        ├── 502.html
+        └── error/
+            └── base.html
 ```
 
-## Configuration
+---
+
+## ⚙️ Configuration
 
 ### Environment Variables
 
-- `DJANGO_SECRET_KEY`: Set your secret key for Django.
+- `DJANGO_SECRET_KEY`: Set your secret key for Django 🔑.
 - `DJANGO_SETTINGS_MODULE`: Automatically set to `project_name.settings.dev` or `project_name.settings.prod` based on the `debug` flag in the configuration.
 
 ### Settings
@@ -122,9 +127,11 @@ django-layout/
 
 ### Custom Configuration
 
-You can add custom configurations in `project_name/config.py`. This file uses `goodconf` for managing settings with environment variables.
+You can add custom configurations in `project_name/config.py`. This file uses `goodconf` for managing settings with environment variables 🌐.
 
-## Running the Project
+---
+
+## ▶️ Running the Project
 
 ### Development
 
@@ -142,18 +149,26 @@ For production, set the `debug` flag to `False` and configure the necessary prod
 gunicorn project_name.wsgi:application
 ```
 
-## Error Pages
+---
 
-Custom error pages are provided for 404, 500, and 502 errors. These pages include interactive animations and can be customized in the `templates/` directory.
+## 🚨 Error Pages
 
-## Contributing
-
-Contributions are welcome! Please feel free to submit a pull request or open an issue for any bugs or feature requests.
-
-## License
-
-This project is licensed under the GNU General Public License v3.0. See the [LICENSE](LICENSE) file for more details.
+Custom error pages are provided for 404, 500, and 502 errors. These pages include **interactive animations** and can be customized in the `templates/` directory.
 
 ---
-## Contact
-- [Telegram](https://t.me/qiyascc)
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a pull request or open an issue for any bugs or feature requests. 🐛✨
+
+---
+
+## 📜 License
+
+This project is licensed under the **GNU General Public License v3.0**. See the [LICENSE](LICENSE) file for more details.
+
+---
+
+## 📞 Contact
+
+- [Telegram](https://t.me/qiyascc) 📱
