@@ -1,7 +1,7 @@
 PROJECT_NAME = {{ project_name }}
 PYTHON = python3
 POETRY = poetry
-MANAGE = $(PYTHON) {{ project_name }}/manage.py
+MANAGE = $(PYTHON) manage.py
 
 all: install run
 
