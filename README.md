@@ -32,6 +32,7 @@ This repository provides a pre-configured Django project layout designed for rap
    django-admin startproject \
      --template=https://github.com/qiyascc/django-layout/zipball/main \
      --extension=py,md,gitignore,yaml,json,toml \
+     --name=Makefile, \
      --exclude=.github \
      YOUR_PROJECT_NAME
    ```
