@@ -73,7 +73,7 @@ This repository provides a **pre-configured Django project layout** designed for
 ## 📂 Project Structure
 
 ```
-qiyascc-django-layout/
+django-layout/
 ├── README.md
 ├── LICENSE
 ├── Makefile
