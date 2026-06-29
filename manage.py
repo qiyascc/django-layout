@@ -14,9 +14,9 @@ def main():
         from django.core.management import execute_from_command_line
     except ImportError as exc:
         raise ImportError(
-            "Couldn't import Django. If it's installed, it is still inaccessible. "
-            "If you have installed Django, you might have forgotten to "
-            "un the 'poetry shell' command."
+            "Couldn't import Django. Are you sure it's installed and "
+            "available on your PYTHONPATH environment variable? Did you "
+            "forget to activate a virtual environment (e.g. 'poetry shell')?"
         ) from exc
     execute_from_command_line(sys.argv)
 

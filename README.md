@@ -37,9 +37,8 @@ This repository provides a **pre-configured Django project layout** designed for
    ```bash
    django-admin startproject \
      --template=https://github.com/qiyascc/django-layout/zipball/main \
-     --extension=py,md,gitignore,yaml,json,toml \
-     --name=Makefile, \
-     --exclude=.github \
+     --extension=py,md,toml,json,gitignore \
+     --name=Makefile,Dockerfile \
      YOUR_PROJECT_NAME
    ```
 
