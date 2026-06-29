@@ -26,20 +26,20 @@ LOCAL_APPS = [
     
 ]
 
-THIRD_PART_APPS = [
+THIRD_PARTY_APPS = [
     'rest_framework', # for REST API
     'django_alive', # for Monitoring
 ]
 
 INSTALLED_APPS = [
-    'jazzmin', # Third Part APP, but admin
+    'jazzmin', # third-party app, must stay above django.contrib.admin
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-] + THIRD_PART_APPS + LOCAL_APPS
+] + THIRD_PARTY_APPS + LOCAL_APPS
 
 
 
@@ -59,6 +59,7 @@ MIDDLEWARE = [
 #-------------------------------#
 ROOT_URLCONF = '{{ project_name }}.urls'
 WSGI_APPLICATION = '{{ project_name }}.wsgi.application'
+ASGI_APPLICATION = '{{ project_name }}.asgi.application'
 #-------------------------------#
 
 
@@ -81,18 +82,23 @@ DATABASE_ROUTERS = ['{{ project_name }}.routers.CoreRouter']
 
 
 #-------------------------------#
-AUTH_PASSWORD_VALIDATORS = [...]
+AUTH_PASSWORD_VALIDATORS = [
+    {'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator'},
+    {'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator'},
+    {'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator'},
+    {'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator'},
+]
 LANGUAGE_CODE = 'en-us'
 TIME_ZONE = 'UTC'
 USE_I18N = True
 USE_TZ = True
 STATIC_URL = 'static/'
-STATIC_ROOT = 'statics/'
+STATIC_ROOT = BASE_DIR / 'statics'
 STATICFILES_DIRS = [
     BASE_DIR / "{{ project_name }}/static",
 ]
 MEDIA_URL = 'media/'
-MEDIA_ROOT = 'media/'
+MEDIA_ROOT = BASE_DIR / 'media'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 ################################# 
